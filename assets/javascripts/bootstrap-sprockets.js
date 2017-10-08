@@ -9,3 +9,4 @@
 //= require ./bootstrap/popover
 //= require ./bootstrap/modal
 //= require ./bootstrap/carousel
+//= require ./bootstrap/index
