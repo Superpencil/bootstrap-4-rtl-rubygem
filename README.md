@@ -17,7 +17,7 @@ Please see the appropriate guide for your environment of choice:
 Add `bootstrap` to your Gemfile:
 
 ```ruby
-gem 'bootstrap', '~> 4.0.0.beta2.1'
+gem 'bootstrap', '~> 4.1.3'
 ```
 
 Ensure that `sprockets-rails` is at least v2.3.2.
@@ -105,7 +105,7 @@ In the application Sass file, replace `@import 'bootstrap'` with:
 @import 'bootstrap-custom';
 ```
 
-[bootstrap-home]: http://v4-alpha.getbootstrap.com/
+[bootstrap-home]: https://getbootstrap.com
 [bootstrap-variables.scss]: https://github.com/twbs/bootstrap-rubygem/blob/master/templates/project/_bootstrap-variables.scss
 [autoprefixer]: https://github.com/ai/autoprefixer
 [popper.js]: https://popper.js.org
