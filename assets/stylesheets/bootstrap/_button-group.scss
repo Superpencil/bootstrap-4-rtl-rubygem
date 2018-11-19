@@ -28,7 +28,7 @@
   .btn + .btn-group,
   .btn-group + .btn,
   .btn-group + .btn-group {
-    margin-left: -$btn-border-width;
+    margin-#{$left}: -$btn-border-width;
   }
 }
 
@@ -45,18 +45,18 @@
 
 .btn-group {
   > .btn:first-child {
-    margin-left: 0;
+    margin-#{$left}: 0;
   }
 
   // Reset rounded corners
   > .btn:not(:last-child):not(.dropdown-toggle),
   > .btn-group:not(:last-child) > .btn {
-    @include border-right-radius(0);
+    @include border-#{$right}-radius(0);
   }
 
   > .btn:not(:first-child),
   > .btn-group:not(:first-child) > .btn {
-    @include border-left-radius(0);
+    @include border-#{$left}-radius(0);
   }
 }
 
@@ -73,28 +73,28 @@
 //
 
 .dropdown-toggle-split {
-  padding-right: $btn-padding-x * .75;
-  padding-left: $btn-padding-x * .75;
+  padding-#{$right}: $btn-padding-x * .75;
+  padding-#{$left}: $btn-padding-x * .75;
 
   &::after,
   .dropup &::after,
-  .dropright &::after {
-    margin-left: 0;
+  .drop#{$right} &::after {
+    margin-#{$left}: 0;
   }
 
-  .dropleft &::before {
-    margin-right: 0;
+  .drop#{$left} &::before {
+    margin-#{$right}: 0;
   }
 }
 
 .btn-sm + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-sm * .75;
-  padding-left: $btn-padding-x-sm * .75;
+  padding-#{$right}: $btn-padding-x-sm * .75;
+  padding-#{$left}: $btn-padding-x-sm * .75;
 }
 
 .btn-lg + .dropdown-toggle-split {
-  padding-right: $btn-padding-x-lg * .75;
-  padding-left: $btn-padding-x-lg * .75;
+  padding-#{$right}: $btn-padding-x-lg * .75;
+  padding-#{$left}: $btn-padding-x-lg * .75;
 }
 
 
@@ -129,7 +129,7 @@
   > .btn-group + .btn,
   > .btn-group + .btn-group {
     margin-top: -$btn-border-width;
-    margin-left: 0;
+    margin-#{$left}: 0;
   }
 
   // Reset rounded corners
