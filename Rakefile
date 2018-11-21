@@ -45,13 +45,13 @@ end
 
 desc 'Dumps output to a CSS file for testing'
 task :debug do
-  require 'sassc'
+  require 'sass'
   require './lib/bootstrap'
   require 'term/ansicolor'
   require 'autoprefixer-rails'
   path = Bootstrap.stylesheets_path
   %w(_bootstrap _bootstrap-reboot _bootstrap-grid).each do |file|
-    engine = SassC::Engine.new(File.read("#{path}/#{file}.scss"), syntax: :scss, load_paths: [path])
+    engine = Sass::Engine.for_file("#{path}/#{file}.scss", syntax: :scss, load_paths: [path])
     out = File.join('tmp', "#{file[1..-1]}.css")
     css = engine.render
     css = AutoprefixerRails.process(css)

@@ -40,8 +40,8 @@
   top: 0;
 }
 
-.carousel-item-next.carousel-item-#{$left},
-.carousel-item-prev.carousel-item-#{$right} {
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
   transform: translateX(0);
 
   @supports (transform-style: preserve-3d) {
@@ -50,7 +50,7 @@
 }
 
 .carousel-item-next,
-.active.carousel-item-#{$right} {
+.active.carousel-item-right {
   transform: translateX(100%);
 
   @supports (transform-style: preserve-3d) {
@@ -59,7 +59,7 @@
 }
 
 .carousel-item-prev,
-.active.carousel-item-#{$left} {
+.active.carousel-item-left {
   transform: translateX(-100%);
 
   @supports (transform-style: preserve-3d) {
@@ -80,20 +80,20 @@
   }
 
   .carousel-item.active,
-  .carousel-item-next.carousel-item-#{$left},
-  .carousel-item-prev.carousel-item-#{$right} {
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right {
     opacity: 1;
   }
 
-  .active.carousel-item-#{$left},
-  .active.carousel-item-#{$right} {
+  .active.carousel-item-left,
+  .active.carousel-item-right {
     opacity: 0;
   }
 
   .carousel-item-next,
   .carousel-item-prev,
   .carousel-item.active,
-  .active.carousel-item-#{$left},
+  .active.carousel-item-left,
   .active.carousel-item-prev {
     transform: translateX(0);
 
